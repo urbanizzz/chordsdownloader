@@ -1,0 +1,53 @@
+name:                chordsdownloader
+version:             0.1.0.0
+github:              "urbanizzz/chordsdownloader"
+license:             BSD3
+author:              "urbanizzz"
+maintainer:          "yuraoskin@gmail.com"
+copyright:           "urbanizzz"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            haskell project
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/urbanizzz/chordsdownloader#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- http-conduit
+- bytestring
+
+default-extensions:
+  - OverloadedStrings
+
+library:
+  source-dirs: src
+
+executables:
+  chordsdownloader-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - chordsdownloader
+
+tests:
+  chordsdownloader-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - chordsdownloader
