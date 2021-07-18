@@ -10,7 +10,7 @@ type Content = BL.ByteString
 
 urlPrefix = "https://muzland.ru/pic/chords/"
 fileExtension = ".gif"
-savePath = "/home/urbanizzz/chords/"
+savePath = "~/chords/"
 
 chordNotes = ["C", "Cw", "D", "Dw", "E", "F", "Fw", "G", "Gw", "A", "Bb", "H"]
 chordSuffixes =
