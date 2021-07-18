@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f5841502509193c1fa5ac1d33b872eb90246fe18f138f4cb3f8ed543c8c640a7
+-- hash: 701b91e29924e2819487b777bcf2856599e9a2a22477d1c46cb1e2e8e0d66576
 
 name:           chordsdownloader
 version:        0.1.0.0
@@ -36,6 +36,7 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , directory
     , http-conduit
   default-language: Haskell2010
 
@@ -51,6 +52,7 @@ executable chordsdownloader-exe
       base >=4.7 && <5
     , bytestring
     , chordsdownloader
+    , directory
     , http-conduit
   default-language: Haskell2010
 
@@ -67,5 +69,6 @@ test-suite chordsdownloader-test
       base >=4.7 && <5
     , bytestring
     , chordsdownloader
+    , directory
     , http-conduit
   default-language: Haskell2010
